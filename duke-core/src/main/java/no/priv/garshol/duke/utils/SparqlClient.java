@@ -3,12 +3,7 @@ package no.priv.garshol.duke.utils;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
-import java.util.Map;
-import java.util.Set;
-import java.util.List;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.ArrayList;
+import java.util.*;
 import java.io.IOException;
 import java.net.URL;
 import java.net.URLEncoder;
@@ -54,7 +49,8 @@ public class SparqlClient {
       // Basic Authentication
       if (username != null && password != null) {
         byte[] buf = (username + ":" + password).getBytes("utf-8");
-        String encoding = new sun.misc.BASE64Encoder().encode(buf);
+        String encoding = Base64.getEncoder().encodeToString(buf);
+
         conn.setRequestProperty("Authorization", "Basic " + encoding);
       }
 

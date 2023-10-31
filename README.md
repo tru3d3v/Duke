@@ -52,7 +52,7 @@ easy as including the following in your pom file:
 
 ```
 <dependency>
-  <groupId>no.priv.garshol.duke</groupId>
+  <groupId>io.github.tru3d3v</groupId>
   <artifactId>duke</artifactId>
   <version>1.2</version>
 </dependency>
